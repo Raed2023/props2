@@ -8,21 +8,23 @@ const Profilee = (props) => {
         <h3>{props.ABC.profession}</h3>
         <p>{props.ABC.bio}</p>
         <img src={props.children} alt="" />
-        <button onclick={() =>  props.handleName(props.ABC.fullName)}>Click Me</button> 
+        <button onClick={() =>  props.handleName(props.ABC.fullName)}>Click Me</button> 
         
     </div>
   )
 }
 Profilee.defaultProps ={
-fullName : '.....',
+ABC:{
+  fullName : '.....',
 bio : '.....',
 profession :'.....'
+}
 
 }
 
 Profilee.propTypes={
 
-fullName : propTypes.string,
+fullName : propTypes.bool,
 bio : propTypes.string,
 profession : propTypes.string
 }
