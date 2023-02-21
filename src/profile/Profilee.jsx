@@ -6,7 +6,7 @@ const Profilee = (props) => {
     <div>
         <h1>{props.ABC.fullName}</h1>
         <h3>{props.ABC.profession}</h3>
-        <p>{props.ABC.bio}</p>
+        <p style={{fontSize:20}} >{props.ABC.bio}</p>
         <img src={props.children} alt="" />
         <button onClick={() =>  props.handleName(props.ABC.fullName)}>Click Me</button> 
         
@@ -14,17 +14,15 @@ const Profilee = (props) => {
   )
 }
 Profilee.defaultProps ={
-ABC:{
-  fullName : '.....',
+fullName : '.....',
 bio : '.....',
 profession :'.....'
-}
 
 }
 
 Profilee.propTypes={
 
-fullName : propTypes.bool,
+fullName : propTypes.string,
 bio : propTypes.string,
 profession : propTypes.string
 }
